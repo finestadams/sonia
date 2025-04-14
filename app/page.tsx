@@ -21,17 +21,17 @@ export default function Home() {
   }, [sortBy]);
 
   return (
-    <div className="w-full md:w-[80%] lg:w-sm xl:w-3xl mx-auto pt-10 md:pt-16 lg:pt-24">
-      <div className="flex justify-center mb-10 gap-4">
+    <div className="w-full md:w-md lg:w-sm xl:w-3xl mx-auto pt-10 md:pt-16 lg:pt-24">
+      <div className="flex justify-center items-start mb-10 gap-4">
         <DropDownComponent
           onChange={(value: SortOption) => setSortBy(value)}
           sortBy={sortBy}
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 ">
-        {data?.map((item, ind) => (
-          <Cards key={ind} items={item} />
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 ">
+        {data?.map((item, index) => (
+          <Cards key={index} items={item} />
         ))}
       </div>
     </div>
