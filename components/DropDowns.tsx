@@ -33,7 +33,7 @@ export default function DropDown({ onChange, sortBy }: DropdownInterface) {
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
-        <Button variant="outline" className="w-max">
+        <Button variant="outline" className=" cursor-pointer">
           {dropDownLabel}
         </Button>
       </PopoverTrigger>
@@ -45,7 +45,7 @@ export default function DropDown({ onChange, sortBy }: DropdownInterface) {
                 key={option.value}
                 variant="ghost"
                 className={cn(
-                  "px-5 py-3 text-sm w-full",
+                  "px-5 py-3 text-sm w-full cursor-pointer",
                   option.value === sortBy && "bg-gray-500 text-white"
                 )}
                 onClick={() => handleClick(option.value as SortOption)}
