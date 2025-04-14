@@ -45,7 +45,7 @@ export default function DropDown({ onChange, sortBy }: DropdownInterface) {
                 key={option.value}
                 variant="ghost"
                 className={cn(
-                  "px-4 py-2 text-sm w-full",
+                  "px-5 py-3 text-sm w-full",
                   option.value === sortBy && "bg-gray-500 text-white"
                 )}
                 onClick={() => handleClick(option.value as SortOption)}
